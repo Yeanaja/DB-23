@@ -1,11 +1,12 @@
-#include <iostream>
+#include <bits/stdc++.h>
 #include <algorithm>
 #include <string>
 using namespace std;
 string input [3] = {"art", "games", "hope"};
 string menu;
-char option[]={"y", "n"};
+string option[]={"y", "n"};
 int random = 1 + (rand() % 9);
+string games[]={"tic tac toe", "rock paper scissors"};
 
 void lowerCase(){
     transform(menu.begin(), menu.end(), menu.begin(),::tolower);
@@ -27,7 +28,6 @@ int main(){
         break; 
     
     case 1:
-        string games[]={"tic tac toe", "rock paper scissors"};
         cout<<"test";
         cin>>menu;
         lowerCase();
