@@ -7,6 +7,7 @@ string menu;
 string option[]={"y", "n"};
 int random = 1 + (rand() % 9);
 string games[]={"tic tac toe", "rock paper scissors"};
+string rps;
 
 void lowerCase(){
     transform(menu.begin(), menu.end(), menu.begin(),::tolower);
@@ -43,7 +44,16 @@ int main(){
         break;
         
         case 1:
-            cout<<"rock paper scissors";
+            cout<<"rock paper scissors"<<endl<<endl;
+            cout<<"Masukan pilihan lu: ";
+            cin>>rps;
+            if(random==1 || random==4 || random==7){
+                cout<<"rock";
+            }else if(random==2 || random==5|| random==8){
+                cout<<"paper";
+            }else{
+                cout<<"Scissors";
+            }
         break;
         
         }
