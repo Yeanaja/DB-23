@@ -1,13 +1,11 @@
 #include <bits/stdc++.h>
-#include <algorithm>
-#include <string>
 using namespace std;
 string input [3] = {"art", "games", "hope"};
 string menu;
 string option[]={"y", "n"};
 int random = 1 + (rand() % 9);
 string games[]={"tic tac toe", "rock paper scissors"};
-string rps;
+string rps, rps1;
 
 void lowerCase(){
     transform(menu.begin(), menu.end(), menu.begin(),::tolower);
@@ -48,11 +46,11 @@ int main(){
             cout<<"Masukan pilihan lu: ";
             cin>>rps;
             if(random==1 || random==4 || random==7){
-                cout<<"rock";
+                rps1="rock";
             }else if(random==2 || random==5|| random==8){
-                cout<<"paper";
+                rps1="paper";
             }else{
-                cout<<"Scissors";
+                rps1="scissors";
             }
         break;
         
