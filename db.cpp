@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#include<iomanip>
 using namespace std;
 string input [3] = {"art", "games", "hope"};
 string menu;
@@ -11,12 +12,11 @@ void lowerCase(){
     transform(menu.begin(), menu.end(), menu.begin(),::tolower);
 }
 
-void end(){
-
-}
-
 int main(){
-    cout<<"test";
+    cout<<left<<setw(10)<<"Art"<<endl;
+    cout<<left<<setw(10)<<"Games"<<endl;
+    cout<<left<<setw(10)<<"Hope"<<endl;
+    cout<<endl<<"Choices(sesuai yang ada di menu yaa) :";
     cin>>menu;
     lowerCase();
     
