@@ -8,15 +8,24 @@ int x= 1 + (rand() % 9);
 string games[]={"tic tac toe", "rock paper scissors"};
 string rps, rps1;
 
+void pembatas(){
+    for(int i=0; i<=10;i++){
+        cout<<"-";
+    }
+    cout<<endl;
+}
 void lowerCase(){
     transform(menu.begin(), menu.end(), menu.begin(),::tolower);
 }
 
 int main(){
     cout<<left<<setw(10)<<"Art"<<endl;
+    pembatas();
     cout<<left<<setw(10)<<"Games"<<endl;
+    pembatas();
     cout<<left<<setw(10)<<"Hope"<<endl;
-    cout<<endl<<"Choices(sesuai yang ada di menu yaa) :";
+    pembatas();
+    cout<<endl<<"Choices(sesuai yang ada di menu yaa) : ";
     cin>>menu;
     lowerCase();
     
@@ -31,7 +40,11 @@ int main(){
         break; 
     
     case 1:
-        cout<<"test";
+        cout<<left<<setw(10)<<"tic tac toe"<<endl;
+        pembatas();
+        cout<<left<<setw(10)<<"rock paper scissors"<<endl;
+        pembatas();
+        cout<<endl<<"Games yang mau dimainin : ";
         cin>>menu;
         lowerCase();
         check=0;
