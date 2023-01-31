@@ -2,13 +2,17 @@
 using namespace std;
 string input [3] = {"art", "games", "hope"};
 string menu;
-string option[]={"y", "n"};
-int random = 1 + (rand() % 9);
+string option[]={"yes", "no", "y", "n"};
+int x= 1 + (rand() % 9);
 string games[]={"tic tac toe", "rock paper scissors"};
 string rps, rps1;
 
 void lowerCase(){
     transform(menu.begin(), menu.end(), menu.begin(),::tolower);
+}
+
+void end(){
+
 }
 
 int main(){
@@ -30,13 +34,13 @@ int main(){
         cout<<"test";
         cin>>menu;
         lowerCase();
-        int check1=0;
+        check=0;
         
-        while(menu!=games[check1]){
-            check1++;
+        while(menu!=games[check]){
+            check++;
         }
         
-        switch(check1){
+        switch(check){
         case 0:
             cout<<"tic tac toe";
         break;
@@ -45,9 +49,9 @@ int main(){
             cout<<"rock paper scissors"<<endl<<endl;
             cout<<"Masukan pilihan lu: ";
             cin>>rps;
-            if(random==1 || random==4 || random==7){
+            if(x==1 || x==4 || x==7){
                 rps1="rock";
-            }else if(random==2 || random==5|| random==8){
+            }else if(x==2 || x==5|| x==8){
                 rps1="paper";
             }else{
                 rps1="scissors";
